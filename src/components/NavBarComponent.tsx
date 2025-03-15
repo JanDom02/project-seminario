@@ -1,6 +1,8 @@
+"use client"
+
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { navBarStyles } from "@/styles/navBarStyles";
 
 interface NavbarProps {
@@ -8,7 +10,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ links }: NavbarProps) {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <nav className={navBarStyles.container}>
@@ -18,7 +20,7 @@ export default function Navbar({ links }: NavbarProps) {
             key={link.href}
             href={link.href}
             className={`${navBarStyles.link} ${
-              router.pathname === link.href ? navBarStyles.active : ""
+              pathname === link.href ? navBarStyles.active : ""
             }`}
           >
             {link.label}

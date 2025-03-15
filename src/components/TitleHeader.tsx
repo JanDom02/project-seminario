@@ -10,10 +10,10 @@ type TituloProps = {
 
 export default function TituloHeader({title, subtitle}:TituloProps) {
     return (
-        <div>
-            <h1>
+        <div >
+            <h1 className="text-2xl text-black font-bold">
                 {title}
-            </h1> <span>{subtitle}</span>
+            </h1> <span className="text-lg font-thin text-black">{subtitle}</span>
         </div>
     );
 
