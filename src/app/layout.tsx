@@ -37,24 +37,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const links = [
-    {label: "Incio", href: "/"},
-    {label: "Partidos Politicos", href: "/Partidos"},
-    {label: "Candidatos", href: "/Candidatos"},
+    {label: "INICIO", href: "/"},
+    {label: "PARTIDOS POLITICOS", href: "/Partidos"},
+    {label: "CANDIDATOS", href: "/Candidatos"},
+    {label: "PROPUESTAS", href: "/Propuestas"}
   ]
   return (
     <html lang="en" className = {`${montserrat.variable} ${inter.variable}`}>
       <body className="font-montserrat antialiased">
         <div>
-          <TituloHeader title="Transparencia Politica" subtitle="Al alcanze de todos..."/>
+        <div className="flex flex-col items-center">
+          <TituloHeader title="Transparencia Politica" subtitle="Al alcance de todos..."/>
+        </div>
+
           <Navbar links={links}/>
         </div>
         <h1></h1>
         
         <main className="mx-auto max-w-xl">
-          <div className="px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <div className="px-4 py-4 lg:px-8">
             {children}
           </div>
         </main>
+
       </body>
     </html>
   );

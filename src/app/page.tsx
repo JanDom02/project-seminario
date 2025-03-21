@@ -1,13 +1,17 @@
 // import Image from "next/image";
-
- 
 export default function Home() {
-  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-white bg-black ">Home</h1>
-
+    <div className="flex flex-col items-center gap-4 p-4 w-full mt-[-38px]">
+      <img 
+        src="/img/Personas Votando.png" 
+        alt="Descripción de la imagen" 
+        className="w-auto max-w-none h-auto scale-88"
+      />
+      <h1 className="font-bold text-center text-2xl leading-tight">
+        TRANSPARENCIA POLÍTICA <br />
+        <span className="block">EN</span>  
+        TIEMPO REAL
+      </h1>
     </div>
-
   );
 }
