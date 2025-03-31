@@ -1,17 +1,15 @@
 import React from "react";
-import { buttonStyles } from "@/styles/buttonStyles";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  variant?: keyof typeof buttonStyles;
+  className?: string;
 }
 
-export default function PrincipleButton({ variant = "primary", title, ...props }: ButtonProps) {
+export default function PrincipleButton({title, className, ...props}: ButtonProps) {
   return (
-    <button className={`${buttonStyles[variant]} ${props.className || ""}`} {...props}>
+    <button className={`text-black rounded-md border-1 py-2 px-6 ${className}`} {...props}>
       {title}
     </button>
   );
 }
-
 
