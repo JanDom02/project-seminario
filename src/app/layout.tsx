@@ -3,6 +3,8 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBarComponent";
 import TituloHeader from "@/components/TitleHeader";
+import PrincipleButton from "@/components/PrincipleButton";
+import Sidebar from "@/components/SideBarComponet";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -44,12 +46,19 @@ export default function RootLayout({
   return (
     <html lang="en" className = {`${montserrat.variable} ${inter.variable}`}>
       <body className="font-montserrat antialiased">
-        <div>
+        <div className=" flex justify-center relative">
+          <div className=" top-0 left-0 p-4">
+            <Sidebar></Sidebar>
+          </div>
+          <div className=" py-3.5">
           <TituloHeader title="Transparencia Politica" subtitle="Al alcanze de todos..."/>
-          <Navbar links={links}/>
+          </div>
+          <div className="absolute top-0 right-0 p-4">
+            <PrincipleButton title="Iniciar Sesion" className="font-bold shadow-lg"/>
+          </div>
+          
         </div>
-        <h1></h1>
-        
+        <Navbar links={links}/>
         <main className="mx-auto max-w-xl">
           <div className="px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             {children}
