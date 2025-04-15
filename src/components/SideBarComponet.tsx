@@ -13,7 +13,7 @@ export default function Sidebar() {
       {/* Icono del menú de hamburguesa */}
       {!isOpen && (
           <button
-          className="fixed top-4 left-4 z-50 p-2 cursor-pointer"
+          className="absolute top-4 left-4 p-2 cursor-pointer"
           onClick={() => setIsOpen(true)}
           aria-label="Abrir menú"
         >

@@ -12,17 +12,17 @@ export default function CandidatosPage() {
         <PartyCard 
           name="Pan"
           description="Ricardo Anaya"
-          imageUrl="./img/Anaya.jpeg"
+          imageUrl="/img/Anaya.jpeg"
         />
         <PartyCard 
           name="Morena"
           description="Andrés Manuel López Obrador"
-          imageUrl="./img/Descarga.jpeg"
+          imageUrl="/img/Descarga.jpeg"
         />
         <PartyCard 
           name="PRI"
           description="José Meade"
-          imageUrl="./img/Meade.jpeg"
+          imageUrl="/img/Meade.jpeg"
         />
       </div>      
     </div>

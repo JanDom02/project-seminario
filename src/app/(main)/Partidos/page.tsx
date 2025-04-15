@@ -12,22 +12,22 @@ export default function PartidosPage() {
         <PartyCard 
           name="Pan"
           description="El Partido Acción Nacional (PAN)"
-          imageUrl="./img/Pan Logo.png"
+          imageUrl="/img/Pan Logo.png"
         />
         <PartyCard 
           name="Morena"
           description="El Partido Movimiento de Regeneración Nacional (Morena)"
-          imageUrl="./img/Morena Logo.png"
+          imageUrl="/img/Morena Logo.png"
         />
         <PartyCard 
           name="PRI"
           description="El Partido Revolucionario Institucional (PRI)"
-          imageUrl="./img/Pri Logo.png"
+          imageUrl="/img/Pri Logo.png"
         />
         <PartyCard 
           name="PRD"
           description="Partido de la Revolución Democrática (PRD)"
-          imageUrl="./img/PRD Logo.png"
+          imageUrl="/img/PRD Logo.png"
         />
       </div>
     </div>
