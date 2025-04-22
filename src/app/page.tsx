@@ -7,7 +7,7 @@ import Link from 'next/link'
  
 export default function Home() {
   const links = [
-    {label: "Incio", href: "/"},
+    {label: "Inicio", href: "/"},
     {label: "Partidos Politicos", href: "/Partidos"},
     {label: "Candidatos", href: "/Candidatos"},
   ]
