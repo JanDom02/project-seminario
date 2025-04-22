@@ -4,8 +4,6 @@ import TituloHeader from "@/components/TitleHeader";
 import PrincipleButton from "@/components/PrincipleButton";
 
 import Link from 'next/link'
-
-
  
 export default function Home() {
   const links = [
@@ -40,6 +38,5 @@ export default function Home() {
         </main>
     </>
       
-
   );
 }

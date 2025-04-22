@@ -40,14 +40,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const links = [
-    {label: "Incio", href: "/"},
-    {label: "Partidos Politicos", href: "/Partidos"},
-    {label: "Candidatos", href: "/Candidatos"},
+    {label: "INICIO", href: "/"},
+    {label: "PARTIDOS POLITICOS", href: "/Partidos"},
+    {label: "CANDIDATOS", href: "/Candidatos"},
+    {label: "PROPUESTAS", href: "/Propuestas"}
   ]
   return (
     <html lang="en" className = {`${montserrat.variable} ${inter.variable}`}>
       <body className="font-montserrat antialiased">
-        {children}
+        <main className="mx-auto max-w-xl">
+          <div className="px-4 py-4 lg:px-8">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );

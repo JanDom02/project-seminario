@@ -7,7 +7,6 @@ type TituloProps = {
     title: string
     subtitle: string
 }
-
 export default function TituloHeader({title, subtitle}:TituloProps) {
     return (
         <div className="flex flex-col items-center justify-center" >
