@@ -1,58 +1,55 @@
-"use client"; // Necesario porque usamos useState
+"use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openPartidos, setOpenPartidos] = useState(true);
+  const [openCandidatos, setOpenCandidatos] =useState(true);
+
+  const ChevronIcon = ({open}: {open: boolean}) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+    </svg>
+  );
 
   return (
-    <>
-      {/* Icono del menú de hamburguesa */}
-      {!isOpen && (
-          <button
-          className="absolute top-4 left-4 p-2 cursor-pointer"
-          onClick={() => setIsOpen(true)}
-          aria-label="Abrir menú"
-        >
-          <Image src="/img/MenuHambuerguesa.png" alt="Menú" width={40} height={40} />
-        </button>
-      )}
-      
+    <div className="fixed top-0 left-0 h-full w-64 bg-white text-black shadow-md px-6 py-6 space-y-6">
+      <h1 className="text-xl font-bold">Transparencia <br />Politica</h1>
 
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white text-black  transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-      >
-        {/* Botón para cerrar */}
-        <button 
-        className="p-5 cursor-pointer"
-          onClick={() => setIsOpen(false)}
-          aria-label="Cerrar menú"
-        >
-          <Image src="/img/IconoFlecha.png" alt="Flecha atras" width={40} height={40}/>
+      <div>
+        <button className="flex items-center justify-between w-full font-semibold" onClick={() => setOpenPartidos(!openPartidos)}>
+        <span>Partidos</span>
+        <ChevronIcon open={openPartidos} />
         </button>
-
-        {/* Contenido del sidebar */}
-        <nav className="mt-2 p-4 space-y-4">
-          <Link href="/" className="block py-3 px-4 border-b border-gray-400 mb-5 font-bold">Inicio</Link>
-          <Link href="/partidos" className="block py-3 px-4 border-b border-gray-400 mb-5 font-bold">Partidos Políticos</Link>
-          <Link href="/candidatos" className="block py-3 px-4 border-b border-gray-400 mb-5 font-bold">Candidatos</Link>
-          <Link href="/presupuesto" className="block py-3 px-4 border-b border-gray-400 mb-5 font-bold">Presupuesto</Link>
-        </nav>
+        {openPartidos && (
+          <div className="ml-4 mt-2 space-y-2 text-sm">
+            <Link href="/partidos/propuestas" className="block hover:underline">Propuestas</Link>
+            <Link href="/partidos/presupuesto" className="block hover:underline">Presupuesto</Link>
+            <Link href="/partidos/visuales" className="block hover:underline">Visuales</Link>
+            <Link href="/partidos/info" className="block hover:underline">Información general</Link>
+        </div>
+        )}
       </div>
 
-      {/* Fondo oscuro cuando el sidebar está abierto */}
-      {/* {isOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-50"
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )} */}
-    </>
+      {/* Sección Candidatos */}
+      <div>
+        <button
+          className="flex items-center justify-between w-full font-semibold" onClick={() => setOpenCandidatos(!openCandidatos)}>
+          <span>Candidato</span>
+          <ChevronIcon open={openCandidatos} />
+        </button>
+        {openCandidatos && (
+          <div className="ml-4 mt-2 space-y-2 text-sm">
+            <Link href="/candidatos/propuestas" className="block hover:underline">Propuestas</Link>
+            <Link href="/candidatos/presupuesto" className="block hover:underline">Presupuesto</Link>
+            <Link href="/candidatos/visuales" className="block hover:underline">Visuales</Link>
+            <Link href="/candidatos/info" className="block hover:underline">Información general</Link>
+          </div>
+        )}
+      </div>
+
+    </div>
+      
   );
 }
