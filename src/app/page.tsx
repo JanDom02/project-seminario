@@ -17,7 +17,7 @@ export default function Home() {
         <div className=" py-3.5">
           <TituloHeader title="Transparencia Politica" subtitle="Al alcanze de todos..."/>
         </div>
-        <Link href="auth/Login">
+        <Link href="/Login">
           <div className="absolute top-0 right-0 p-4">
             <PrincipleButton 
             title="Iniciar Sesion" 

@@ -27,7 +27,7 @@ export default function AuthForm({isLogin = true}: AuthFormProps) {
 
             <div className="mt-6 text-center">
                 <p className="font-bold text-md">{isLogin ? "¿No tienes una cuenta?" : "¿Ya tienes una cuenta?"}</p>
-                <Link href={isLogin ? "/auth/Registro" : "/auth/Login"} className="hover:underline text-sm">{isLogin ? "Crear una cuenta" : "Iniciar Sesion"}</Link>
+                <Link href={isLogin ? "/Registro" : "/Login"} className="hover:underline text-sm">{isLogin ? "Crear una cuenta" : "Iniciar Sesion"}</Link>
             </div>
         </div>         
     )
