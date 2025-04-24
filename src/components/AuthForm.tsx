@@ -9,9 +9,15 @@ type AuthFormProps = {
 
 export default function AuthForm({isLogin = true}: AuthFormProps) {
     return(
-        <div className=" flex flex-col justify-center items-center border-2 border-black rounded-lg p-8 w-full max-w-md text-black">
-            <h3 className="text-4xl font-bold mb-15 py-5">{isLogin ? "Iniciar Sesion" : "Crear Cuenta"}</h3>
+        <div className=" flex flex-col items-center relative border-2 border-black rounded-lg p-8 w-full max-w-md text-black">
+            <Link href="/" className="absolute left-4 top-3  text-gray-700 hover:text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-12">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+            </Link> 
 
+            <h3 className="text-4xl font-bold mb-15 mt-5 py-5">{isLogin ? "Iniciar Sesion" : "Crear Cuenta"}</h3>
+            
             {!isLogin && (
                 <>
                     <InputComponent placeholder="Nombre" className="mb-10"/>

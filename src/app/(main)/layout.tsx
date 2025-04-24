@@ -20,7 +20,7 @@ export default function MainLayout({
           <div className=" py-3.5">
             <TituloHeader title="Transparencia Politica" subtitle="Al alcanze de todos..."/>
           </div>
-          <Link href="auth/Login">
+          <Link href="/Login">
             <div className="absolute top-0 right-0 p-4">
               <PrincipleButton 
               title="Iniciar Sesion" 
@@ -32,10 +32,8 @@ export default function MainLayout({
           </Link>
         </div>
         <Navbar links={links}/>
-        <main className="w-full">
-          <div className="px-4 py-16 sm:px-6 sm:py-24 lg:max-w-8xl lg:px-8">
+        <main className="w-full px-4 py-16 sm:px-6 sm:py-24 lg:max-w-8xl lg:px-8">
             {children}
-          </div>
         </main>
     </>
   );
