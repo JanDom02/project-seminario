@@ -26,7 +26,7 @@ export default function PartidosPage() {
           slug="pri"
         />
         <PartyCard 
-          name="Movimiento Naranja"
+          name="Movimiento Ciudadano"
           description="El Partido Movimiento Ciudadano"
           imageUrl="/img/MC Logo.png"
           slug="mc"
@@ -47,7 +47,7 @@ export default function PartidosPage() {
           slug="verde"
         />
         <PartyCard 
-          name="PT"
+          name="Partido del Trabajo"
           description="El Partido del Trabajo (PT)"
           imageUrl="/img/PT Logo.png"
           slug="pt"

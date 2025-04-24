@@ -81,7 +81,7 @@ const partidos: Record<string, Partido> = {
         ],
     },
     pt: {
-        nombre: "PRD",
+        nombre: "PT",
         logo: "/img/PT Logo.png",
         sobre:
             'El PT es un partido político mexicano de izquierda fundado el 8 de diciembre de 1990. Surgió de la coordinación de diversas organizaciones sociales, como los Comités de Defensa Popular de Chihuahua y Durango, el Frente Popular de Lucha de Zacatecas y el Frente Popular "Tierra y Libertad" de Monterrey. El partido se define como una fuerza política que busca la transformación social y económica de México, promoviendo la justicia social, la equidad y la defensa de los derechos de los trabajadores. Nuestro lema es "Unidad Nacional, ¡Todo el poder al Pueblo!​"',
