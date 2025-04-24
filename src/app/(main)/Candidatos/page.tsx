@@ -1,28 +1,28 @@
-import PartyCard from "@/components/CardPartido";
+import PartyCard from "@/components/CardCandidatos";
 
 export default function CandidatosPage() {
   return (
-    <div className="flex flex-col items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      
-      {/* Título corregido */}
-      <h1 className="bg-black text-white rounded-full py-3 px-5 mt-4">Candidatos</h1>  
+    <div className="flex flex-col items-center min-h-screen p-4 gap-4 sm:p-6">
 
       {/* Contenedor de tarjetas */}
       <div className="flex flex-row overflow-x-auto space-x-4 p-4">
-        <PartyCard 
-          name="Pan"
-          description="Ricardo Anaya"
-          imageUrl="/img/Anaya.jpeg"
+      <PartyCard  
+          name="Claudia Sheinbaum"
+          description="Candidata de Morena"
+          imageUrl="/img/Claudia.jpg"
+          slug="Claudia_Sheinbaum"
         />
         <PartyCard 
-          name="Morena"
-          description="Andrés Manuel López Obrador"
-          imageUrl="/img/Descarga.jpeg"
+          name="Xóchitl Gálvez"
+          description="Candidata del PAN"
+          imageUrl="/img/Xochitl.jpg"
+          slug="Xochitl_Galvez"
         />
         <PartyCard 
-          name="PRI"
-          description="José Meade"
-          imageUrl="/img/Meade.jpeg"
+          name="Jorge Máynez"
+          description="Candidato de Movimiento Ciudadano"
+          imageUrl="/img/Maynez.jpg"
+          slug="Jorge_Maynez"
         />
       </div>      
     </div>
