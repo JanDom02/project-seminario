@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
 }
 
-export default function LoginButton({title, className}: ButtonProps) {
+export default function AuthButton({title, className}: ButtonProps) {
     return (
         <button className={`text-white bg-blue-500 py-3 px-8 rounded-sm ${className}`}>{title}</button>
     )
