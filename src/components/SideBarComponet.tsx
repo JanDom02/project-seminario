@@ -24,10 +24,10 @@ export default function Sidebar() {
         </button>
         {openPartidos && (
           <div className="ml-4 mt-2 space-y-2 text-sm">
-            <Link href="/partidos/propuestas" className="block hover:underline">Propuestas</Link>
-            <Link href="/partidos/presupuesto" className="block hover:underline">Presupuesto</Link>
-            <Link href="/partidos/visuales" className="block hover:underline">Visuales</Link>
-            <Link href="/partidos/info" className="block hover:underline">Información general</Link>
+            <Link href="/panel?tab=propuestas" className="block hover:underline">Propuestas</Link>
+            <Link href="/panel?tab=presupuesto" className="block hover:underline">Presupuesto</Link>
+            <Link href="/panel?tab=visuales" className="block hover:underline">Visuales</Link>
+            <Link href="/panel?tab=informacion" className="block hover:underline">Información general</Link>
         </div>
         )}
       </div>
