@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Modal from './Modal';
 import PrincipleButton from "./PrincipleButton";
 import InputComponent from './InputComponent';
@@ -12,6 +13,8 @@ export default function ProfilePanel() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [invitationLink, setInvitationLink] = useState<string | null>(null);
     const [activeTab, setActiveTab] = useState<'perfil' | 'presupuesto' | 'visuales' | 'informacion' | 'propuestas'>('perfil');
+
+    const router = useRouter();
     
     // Simulación de estas funciones - reemplazar con las implementaciones reales
     const useUserRole = () => {
@@ -128,6 +131,18 @@ export default function ProfilePanel() {
             <div className="w-64 bg-white shadow-md">
                 <div className="p-4 font-bold text-lg border-b">
                     <h3>Transparencia <br/>Política</h3>
+                </div>
+
+                <div className="p-4 border-t mt-auto">
+                    <button
+                        onClick={() => router.push('/')}
+                        className="flex items-center text-sm text-blue-600 hover:underline"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l9-9 9 9M4 10v10h4v-6h8v6h4V10" />
+                        </svg>
+                        Volver al Inicio
+                    </button>
                 </div>
 
                 {/* Perfil Button - NUEVO */}
